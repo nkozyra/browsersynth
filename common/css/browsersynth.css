@@ -1,0 +1,110 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+#interface {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 25%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.synth {
+    background-color: #eee;
+    height: 100%;
+}
+.keyboard {
+    border-top: 4px solid #000;
+}
+.keybed {
+    width: 100%;
+    display:grid;
+    height: 100%;
+    min-height: 100%;
+    background-color: #111;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.key {
+    background-color: #fff;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-align: center;
+    position: relative;
+    font-size: 10px;
+}
+.key.semitone {
+    position: absolute;
+    top: 0;
+    left: 75%;
+    z-index: 1;
+    width: 50%;
+    height: 60%;
+    background-color: #000;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.25);
+}
+.key.playing {
+    background-color: #eee;
+}
+.key.semitone.playing {
+    background-color: #333;
+}
+.keybed.oct1 {
+    grid-template-columns: repeat(7,1fr);
+}
+.keybed.oct2 {
+    grid-template-columns: repeat(14,1fr);
+}
+.keybed.oct3 {
+    grid-template-columns: repeat(21,1fr);
+}
+.keybed.oct4 {
+    grid-template-columns: repeat(28,1fr);
+}
+.keybed.oct5 {
+    grid-template-columns: repeat(35,1fr);
+}
+.keybed.oct6 {
+    grid-template-columns: repeat(42,1fr);
+}
+.keybed.oct7 {
+    grid-template-columns: repeat(49,1fr);
+}
+
+.toggle {
+    width: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    align-items: center;
+}
+.toggleButton {
+    width: 100%;
+    height: 80px;
+    background-color: grey;
+    cursor: pointer;
+}
+.toggleOption {
+    display: grid;
+    grid-template-columns: 10px auto;
+    grid-gap: 4px;
+    align-items: center;
+}
+.toggleOption > div > span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 50%;
+}
+.toggleOption > div.active > span {
+    background-color: green;
+    filter: drop-shadow(0 0 10px rgba(255, 245, 200, 0.75));
+}

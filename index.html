@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <title>Browsersynth</title>
+    <link type="text/css" rel="stylesheet" href="common/css/browsersynth.css" />
+</head>
+<body>
+<div id="interface">
+    <div id="synth"></div>
+    <div id="controls"></div>
+</div>
+<script type="module">
+    import {keyboard} from './common/keyboard.js'
+    import {simpleSynth} from './01_simplesynth/simplesynth.js'
+    const synth = simpleSynth();
+    document.getElementById('synth').appendChild(synth.gui);
+    const controller = keyboard({octaves: 3, synth: synth.playNote})
+    document.getElementById('controls').appendChild(controller);
+</script>
+</body>
+</html>
