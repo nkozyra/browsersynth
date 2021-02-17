@@ -32,13 +32,14 @@ export const keyboard = ({octaves = 2, startOctave = 2, synth}) => {
         nKey.classList.add('key','natural');
         nKey.innerHTML = note;
         nKey.setAttribute('data-note', freq);
-        nKey.onclick = (n) => {
-            synth(n.target.getAttribute('data-note'));
-        };
         nKey.onmousedown = (n) => {
+            synth(n.target.getAttribute('data-note'));
             n.target.classList.add('playing');
         };
         nKey.onmouseup = (n) => {
+            n.target.classList.remove('playing');
+        };
+        nKey.onmouseout = (n) => {
             n.target.classList.remove('playing');
         };
         notes[i%7].freq = freq + freq;
