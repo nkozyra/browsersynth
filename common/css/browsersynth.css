@@ -86,10 +86,18 @@ body {
     align-items: center;
 }
 .toggleButton {
-    width: 100%;
-    height: 80px;
-    background-color: grey;
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    background-color: #e6c1ca;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
     cursor: pointer;
+    position: relative;
+}
+.toggleButton:active {
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0, 0, 0, 0.12);
 }
 .toggleOption {
     display: grid;
@@ -101,10 +109,29 @@ body {
     display: block;
     width: 10px;
     height: 10px;
-    background-color: rgba(0,0,0,0.75);
+    background-color: rgba(0,0,0,0.25);
     border-radius: 50%;
 }
 .toggleOption > div.active > span {
-    background-color: green;
+    background-color: rgba(180, 225, 20, 1);
     filter: drop-shadow(0 0 10px rgba(255, 245, 200, 0.75));
+}
+input.slider {
+    -webkit-appearance: none;
+    width: 60px;
+    height: 150px;
+    border-radius: 5px;
+    background: #ccc;
+    outline: none;
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+}
+input.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 60px;
+    border-radius: 0;
+    background: #4CAF50;
+    cursor: pointer;
 }
