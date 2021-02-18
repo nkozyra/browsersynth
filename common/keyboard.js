@@ -50,7 +50,7 @@ export const keyboard = ({octaves = 2, startOctave = 2, synth}) => {
             semiTone.classList.add('key','semitone');
             semiTone.innerHTML = notes[i%7+.5].key;
             semiTone.setAttribute('data-note', freq);
-            semiTone.onclick = (n) => {
+            semiTone.onmousedown = (n) => {
                 n.stopPropagation();
                 synth(n.target.getAttribute('data-note'));
             }
