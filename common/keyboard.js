@@ -1,22 +1,22 @@
+export const notes = {
+    0: { key: 'C', freq: 16.35160 },
+    0.5: { key: 'C#/Db', freq: 17.32391 },
+    1: { key: 'D', freq: 18.35405 },
+    1.5: { key: 'D#/Eb', freq: 19.44544 },
+    2: { key: 'E', freq: 20.60172 },
+    3: { key: 'F', freq: 21.82676 },
+    3.5: { key: 'F#/Gb', freq: 23.12465 },
+    4: { key: 'G', freq: 24.49971 },
+    4.5: { key: 'G#/Ab', freq: 25.95654 },
+    5: { key: 'A', freq: 27.50000 },
+    5.5: { key: 'A#/Bb', freq: 29.13524 },
+    6: { key: 'B', freq: 30.86771 },
+};
+
 export const keyboard = ({octaves = 2, startOctave = 2, synth}) => {
     const keyboard = document.createElement('div');
     keyboard.classList.add('keyboard');
-
-    let notes = {
-        0: { key: 'C', freq: 16.35160 },
-        0.5: { key: 'C#/Db', freq: 17.32391 },
-        1: { key: 'D', freq: 18.35405 },
-        1.5: { key: 'D#/Eb', freq: 19.44544 },
-        2: { key: 'E', freq: 20.60172 },
-        3: { key: 'F', freq: 21.82676 },
-        3.5: { key: 'F#/Gb', freq: 23.12465 },
-        4: { key: 'G', freq: 24.49971 },
-        4.5: { key: 'G#/Ab', freq: 25.95654 },
-        5: { key: 'A', freq: 27.50000 },
-        5.5: { key: 'A#/Bb', freq: 29.13524 },
-        6: { key: 'B', freq: 30.86771 },
-    };
-
+    
     const naturalKeys = document.createElement('div');
     naturalKeys.classList.add('keybed','natural',`oct${octaves}`);
 
